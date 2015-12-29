@@ -1,0 +1,207 @@
+/* ****************************************************************************
+ * Base & Reset
+ * ***************************************************************************/
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: avenir, sans-serif;
+  font-size: 87.5%;
+  line-height: 1.5;
+  color: #333;
+  background-color: #EEF4F5;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+@media screen and (min-width: 48em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 75em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: .5em;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 48em) {
+  th, td {
+    padding: .5em 1em;
+  }
+}
+
+tr {
+  border-bottom: 1px solid #E6E9EA;
+}
+
+tr:last-of-type {
+  border-bottom: none;
+}
+
+canvas {
+  width: 100% !important; /* Override the width set by JavaScript to make it more felixable */
+}
+
+/* ****************************************************************************
+ * Colors
+ * ***************************************************************************/
+
+.White {
+  color: #fff;
+}
+
+.BG-White {
+  background-color: #fff;
+}
+
+.LightBlue {
+  color: #EEF4F5;
+}
+
+.DarkBlue {
+  color: #00A4C9;
+}
+
+.BG-DarkBlue {
+  background-color: #00A4C9;
+}
+
+.Grey {
+  color: #586369;
+}
+
+.BG-Grey {
+  background-color: #586369;
+}
+
+.Shadow {
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+
+/* ****************************************************************************
+ * Generic helpers
+ * ***************************************************************************/
+
+.ResetList {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.inlineCenter {
+  text-align: center;
+}
+
+/* ****************************************************************************
+ * Spacing helpers
+ * ***************************************************************************/
+
+.p1 {
+  padding: 1rem;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
+.mr1 {
+  margin-right: 1rem;
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}
+
+.mb2 {
+  margin-bottom:2rem;
+}
+/* ****************************************************************************
+ * Layout helpers
+ * ***************************************************************************/
+
+.W-full--sm {
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+   .Flex {
+     display: flex;
+   }
+
+  .W-half--lg {
+    width: 50%;
+  }
+}
+
+
+/* ****************************************************************************
+ * Componenets
+ * ***************************************************************************/
+.Bubble,
+.Pagination a {
+  border-radius: 50%;
+  line-height: 2em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+}
+
+.Pagination > li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.Pagination > li:last-of-type {
+  margin-right: 0;
+}
+
+.Pagination a {
+  text-decoration: none;
+  background-color: #00A4C9;
+  color: #fff;
+}
+
+.Pagination a:hover,
+.Pagination .selected > a {
+  background-color: #A5DCE6;
+}
+
+.FormField {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0; /* For iOS */
+  border: 1px solid #eee;
+  padding: .5em 1em;
+  font-size: 16px; /* To prevent zooning on iOS  when you focus on an input */
+}
+
+.FormField:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+@media screen and (min-width: 48em) {
+  .Table__comment {
+    width: 40em;
+  }
+}
